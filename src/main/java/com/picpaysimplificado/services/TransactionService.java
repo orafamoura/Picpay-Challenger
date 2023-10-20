@@ -5,17 +5,13 @@ import com.picpaysimplificado.domain.user.User;
 import com.picpaysimplificado.dtos.TransactionDTO;
 import com.picpaysimplificado.repositories.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-
+@Service
 public class TransactionService {
-
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private RestTemplate restTemplate;
 
     @Autowired
     private TransactionRepository repository;
